@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio of Andres Sanchez Caballero: systems engineering student, systems technician and aspiring software architect.">
+<meta property="og:title" content="Andres Sanchez Terminal">
+<meta property="og:description" content="Portfolio of Andres Sanchez Caballero: systems engineering student, systems technician and aspiring software architect.">
+<meta name="theme-color" content="#000000">
+<title>Andres Sanchez Terminal</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+<style>
+:root {
+  --bg: #000000;
+  --fg: #f1f1ee;
+  --dim: #8f8f8a;
+  --line: #3a3a38;
+  --glow: rgba(255, 255, 255, 0.32);
+  --font: "VT323", ui-monospace, "Courier New", monospace;
+  --mono: ui-monospace, "Courier New", monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+html { background: var(--bg); }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 21px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  padding-block: 24px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  text-shadow: 0 0 6px var(--glow);
+}
+.wrap { max-width: 860px; margin: 0 auto; min-width: 0; }
+.scanlines {
+  position: fixed; inset: 0; z-index: 20; pointer-events: none;
+  background: linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%);
+  background-size: 100% 4px;
+}
+.scanlines::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%);
+}
+pre.ascii {
+  font-family: var(--mono);
+  font-size: min(2.9vw, 14px);
+  line-height: 1.1;
+  letter-spacing: 0;
+  margin: 0 0 8px;
+  overflow-x: auto;
+  white-space: pre;
+  -webkit-mask-image: linear-gradient(#000 70%, rgba(0,0,0,0.35));
+  mask-image: linear-gradient(#000 70%, rgba(0,0,0,0.35));
+}
+.sub { color: var(--dim); margin: 0 0 28px; }
+.section-title { font-size: 24px; margin: 34px 0 10px; }
+.section-title::before { content: "[ "; }
+.section-title::after { content: " ]"; }
+p { margin: 0 0 12px; max-width: 70ch; }
+ul { list-style: none; margin: 0; padding: 0; }
+li { padding-left: 1.4em; position: relative; margin: 2px 0; overflow-wrap: anywhere; }
+li::before { content: ">"; position: absolute; left: 0; }
+.k { color: var(--dim); }
+.entry { margin: 0 0 18px; }
+.entry h3 { font: inherit; font-size: 22px; margin: 0 0 2px; }
+.entry h3::before { content: "// DIR: "; color: var(--dim); }
+.entry .meta { color: var(--dim); margin: 0 0 4px; }
+.entry p { margin: 0 0 4px; }
+.tags { color: var(--dim); }
+a { color: var(--fg); text-decoration: none; }
+a:hover, a:focus-visible { background: var(--fg); color: var(--bg); text-shadow: none; outline: none; }
+.nodes li::before { content: "//"; }
+.note { color: var(--dim); font-size: 19px; margin-top: 28px; }
+.cursor { display: inline-block; animation: blink 1.1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.end { margin-top: 36px; }
+@media (max-width: 480px) { body { font-size: 19px; } .section-title { font-size: 22px; } }
+@media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+</style>
+
+</head>
+<body>
+<div class="scanlines" aria-hidden="true"></div>
+<main class="wrap">
+<pre class="ascii" aria-label="ANDRES">
+ █████╗ ███╗   ██╗██████╗ ██████╗ ███████╗███████╗
+██╔══██╗████╗  ██║██╔══██╗██╔══██╗██╔════╝██╔════╝
+███████║██╔██╗ ██║██║  ██║██████╔╝█████╗  ███████╗
+██╔══██║██║╚██╗██║██║  ██║██╔══██╗██╔══╝  ╚════██║
+██║  ██║██║ ╚████║██████╔╝██║  ██║███████╗███████║
+╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝</pre>
+<p class="sub">Andres Sanchez Caballero :: portfolio v1.0</p>
+
+<section id="about">
+  <div class="section-title">ABOUT</div>
+  <p>Systems engineering student, systems technician and future software architect. I work across networking, Windows administration, hardware diagnostics, cybersecurity and Python development.</p>
+  <p class="tags">Systems Technician, Python Developer, Cybersecurity Enthusiast, Aspiring Software Architect, Gamer, Hardware Nerd</p>
+  <ul style="margin-top:10px">
+    <li><span class="k">Location:</span> Colombia</li>
+    <li><span class="k">English:</span> B2</li>
+    <li><span class="k">Status:</span> open to opportunities</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <div class="section-title">CONTACT</div>
+  <ul>
+    <li><span class="k">Email:</span> oscarandreslmz@gmail.com</li>
+    <li><span class="k">GitHub:</span> <a href="https://github.com/ndeahxyzlo" rel="noopener">ndeahxyzlo</a></li>
+    <li><span class="k">LinkedIn:</span> <a href="https://www.linkedin.com/in/andres-caballero-268884272/" rel="noopener">andres-caballero</a></li>
+    <li><span class="k">Instagram:</span> <a href="https://www.instagram.com/adxezz/" rel="noopener">adxezz</a></li>
+  </ul>
+</section>
+
+<section id="education">
+  <div class="section-title">EDUCATION</div>
+  <div class="entry">
+    <h3>Systems Engineering</h3>
+    <p class="meta">Fundación Universitaria San Mateo | 9th semester, social service in progress</p>
+    <p>Machine learning, data warehousing and business intelligence (Inmon vs. Kimball, star schemas, Medallion architecture), IT governance (COBIT, ITIL), cybersecurity risk management (CIA triad, OWASP Top 10, CVSS) and access control (OAuth 2.0, JWT, MFA, RBAC).</p>
+  </div>
+  <div class="entry">
+    <h3>Self-taught</h3>
+    <p class="meta">Ongoing | hands-on practice and personal projects</p>
+    <p>Python and FastAPI development, Kali Linux, networking fundamentals, cybersecurity concepts, hardware diagnostics and PC performance tuning, learned by building and breaking things on my own.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-title">EXPERIENCE</div>
+  <div class="entry">
+    <h3>Systems Technician</h3>
+    <p class="meta">Smart Solution Network | Aug 2025 - Sep 2026</p>
+    <ul>
+      <li>Support for biometric registration software and fingerprint readers</li>
+      <li>Digital signature setup</li>
+      <li>Spreadsheet performance tuning for heavy formulas (VLOOKUP)</li>
+      <li>Laptop hardware failure diagnosis</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-title">PROJECTS</div>
+
+  <div class="entry">
+    <h3>/COMMERCIAL_ADMIN</h3>
+    <p>Multi-tenant commercial administration system on MySQL, with eight modules.</p>
+    <p class="tags">MySQL, multi-tenant, database design</p>
+  </div>
+
+  <div class="entry">
+    <h3>/FINTECH_NOVA</h3>
+    <p>Credit risk evaluation API built with FastAPI. Includes REST development, Bash and Python automation scripts, and Docker containerization with observability.</p>
+    <p class="tags">Python, FastAPI, Docker, Bash</p>
+  </div>
+
+  <div class="entry">
+    <h3>/KNN_MAINTENANCE</h3>
+    <p>Predictive maintenance classifier for factory machines (Maintenance or Operational). KNN written from scratch with no sklearn, pandas or numpy: min-max normalization, Euclidean distance, Leave-One-Out validation and recall as the priority metric.</p>
+    <p class="tags">Python, machine learning, evaluation metrics</p>
+  </div>
+
+  <div class="entry">
+    <h3>/CAMERA_APP</h3>
+    <p>My own camera application, with application security work and server-side validation.</p>
+    <p class="tags">application security, backend</p>
+  </div>
+
+  <div class="entry">
+    <h3>/ANTICHEAT_PS</h3>
+    <p>PowerShell tool built to detect cheating in a Gears of War 4 tournament.</p>
+    <p class="tags">PowerShell, automation, Windows</p>
+  </div>
+
+  <div class="entry">
+    <h3>/ML_CAPSTONES</h3>
+    <p>Two capstone projects for the machine learning course: a classification model to predict whether students pass or fail, and a regression model for housing prices.</p>
+    <p class="tags">classification, regression, in progress</p>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="section-title">STACK</div>
+  <ul>
+    <li><span class="k">Languages:</span> Python, PowerShell, Bash, SQL</li>
+    <li><span class="k">Backend and infrastructure:</span> FastAPI, MySQL, Docker, GitHub Codespaces</li>
+    <li><span class="k">Systems and networking:</span> Windows administration, Kali Linux, networking, AnyDesk</li>
+    <li><span class="k">Security:</span> OWASP Top 10, CVSS, OAuth 2.0, JWT, MFA, RBAC</li>
+    <li><span class="k">Hardware:</span> fault diagnosis, thermal and performance analysis for CPU and GPU</li>
+  </ul>
+</section>
+
+<section id="nodes">
+  <div class="section-title">NAVIGATION_NODES</div>
+  <ul class="nodes">
+    <li><a href="#about">DIR: /SELF/ABOUT</a></li>
+    <li><a href="#education">DIR: /RECORDS/EDUCATION</a></li>
+    <li><a href="#experience">DIR: /RECORDS/EXPERIENCE</a></li>
+    <li><a href="#projects">DIR: /DEV/PROJECTS</a></li>
+    <li><a href="#stack">DIR: /DEV/STACK</a></li>
+    <li><a href="#contact">DIR: /NET/CONTACT</a></li>
+  </ul>
+</section>
+
+<p class="note">*Note: under construction, just like me.*</p>
+<p class="end">[ END OF LINE ] <span class="cursor">█</span></p>
+</main>
+</body>
+</html>
